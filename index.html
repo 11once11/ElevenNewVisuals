@@ -17,478 +17,121 @@ body{background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,'Se
 /* ── NAV ── */
 .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;border-bottom:1px solid var(--border);background:rgba(0,0,0,0.97);position:sticky;top:0;z-index:100;}
 .nav-logo img{height:32px;filter:brightness(1.1);}
-.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;padding:10px 22px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.5px;}
+.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;padding:10px 22px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.5px;text-decoration:none;display:inline-block;}
 
 /* ── HERO ── */
 .hero{padding:80px 5% 64px;text-align:center;position:relative;overflow:hidden;}
 .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
 .hero-blob-1{width:500px;height:400px;background:radial-gradient(circle,rgba(147,51,234,.13),transparent 70%);top:-80px;left:50%;transform:translateX(-50%);}
-.hero-blob-2{width:300px;height:300px;background:radial-gradient(circle,rgba(192,132,252,.08),transparent 70%);bottom:0;right:5%;}
-.hero-tag{display:inline-block;background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.25);color:var(--vp);font-size:10px;font-weight:700;letter-spacing:2px;padding:6px 18px;border-radius:5px;}
+.hero-tag{display:inline-block;background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.25);color:var(--vp);font-size:10px;font-weight:700;letter-spacing:2px;padding:6px 18px;border-radius:50px;margin-bottom:28px;}
 .hero h1{font-size:clamp(28px,5.5vw,52px);font-weight:800;line-height:1.15;margin-bottom:22px;max-width:700px;margin-left:auto;margin-right:auto;}
-.hero h1 .plain{color:#fff;}
 .hero h1 .grad{background:linear-gradient(135deg,#fff 0%,var(--vp) 50%,var(--vd) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-sub{font-size:16px;color:var(--w6);line-height:1.75;max-width:540px;margin:0 auto 36px;}
-.btn-scroll{background:rgba(192,132,252,.1);color:var(--vp);border:1px solid rgba(192,132,252,.3);padding:14px 30px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;}
-.btn-scroll:hover{background:rgba(192,132,252,.2);}
 .hero-stats{margin-top:56px;display:flex;justify-content:center;gap:clamp(20px,5vw,60px);flex-wrap:wrap;padding-top:36px;border-top:1px solid var(--border);}
-.stat-item{text-align:center;}
 .stat-num{font-size:clamp(20px,3vw,28px);font-weight:800;color:var(--vp);}
 .stat-label{font-size:10px;color:var(--w4);margin-top:3px;letter-spacing:1px;}
 
-/* ── HEART SVG ── */
-.heart-icon{display:inline-flex;align-items:center;justify-content:center;}
-.heart-icon svg{width:1em;height:1em;}
-
-/* ── GLOW DIV ── */
-.gd{height:1px;background:linear-gradient(90deg,transparent,var(--vd) 30%,var(--vp) 70%,transparent);margin:0 5%;opacity:.35;}
-
-/* ── SECTION LABEL ── */
-.slabel{text-align:center;margin-bottom:10px;}
-.slabel span{font-size:10px;color:var(--vm);letter-spacing:2.5px;font-weight:700;}
-
-/* ── PAIN ── */
+/* ── PAIN (Tarjetas 2x2 o 1 columna) ── */
 .pain{padding:72px 5%;}
-.pain h2{text-align:center;font-size:clamp(20px,3.5vw,34px);font-weight:800;margin-bottom:10px;}
-.pain-sub{text-align:center;color:var(--w6);font-size:14px;margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7;}
-.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:960px;margin:0 auto;}
-.pain-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px 20px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s;}
-.pain-card:hover{transform:translateY(-4px);border-color:var(--vd);}
+.pain-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;max-width:960px;margin:0 auto;}
+.pain-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:32px 24px;text-align:center;position:relative;transition:transform .2s;}
 .pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--vd),transparent);}
-.pain-card-emoji{font-size:32px;margin-bottom:12px;}
-.pain-card h3{font-size:13px;font-weight:700;color:var(--vp);margin-bottom:10px;line-height:1.4;}
-.pain-card p{font-size:12px;color:var(--w6);line-height:1.65;}
+.pain-emoji{font-size:40px;margin-bottom:15px;display:block;}
 
-/* ── QUOTE ── */
-.qbreak{padding:64px 5%;text-align:center;background:linear-gradient(180deg,#000 0%,#04000f 50%,#000 100%);}
-.qwrap{max-width:620px;margin:0 auto;}
-.qbig{font-size:clamp(17px,3vw,26px);font-weight:800;line-height:1.45;color:#fff;margin-bottom:14px;}
-.qbig em{color:var(--vp);font-style:normal;}
-.qattr{font-size:10px;color:var(--w4);letter-spacing:2px;}
+/* ── COMBOS (Videos uno bajo el otro) ── */
+.combos-container{display:flex;flex-direction:column;gap:50px;max-width:800px;margin:0 auto;}
+.video-wrapper {position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:15px;border:1px solid var(--border2);}
+.video-wrapper iframe {position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
 
-/* ── HOW ── */
-.how{padding:72px 5%;}
-.how h2{text-align:center;font-size:clamp(20px,3.5vw,32px);font-weight:800;margin-bottom:10px;}
-.how-sub{text-align:center;color:var(--w6);font-size:14px;margin-bottom:52px;}
-.steps{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:0;}
-.step{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #0d0025;}
-.step:last-child{border-bottom:none;}
-.step-n{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--vd),var(--vp));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;}
-.step h3{font-size:14px;font-weight:700;margin-bottom:6px;}
-.step p{font-size:13px;color:var(--w6);line-height:1.65;}
-
-/* ── COMBOS ── */
-.combos{padding:72px 5%;background:#000;}
-.combos h2{text-align:center;font-size:clamp(20px,3.5vw,32px);font-weight:800;margin-bottom:10px;}
-.combos-sub{text-align:center;color:var(--w6);font-size:14px;margin-bottom:52px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7;}
-.combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:980px;margin:0 auto;}
-
-.combo-card{background:#0a0018;border:1px solid #1e0840;border-radius:20px;padding:28px 24px 24px;display:flex;flex-direction:column;position:relative;transition:border-color .2s;}
-.combo-card:hover{border-color:var(--vm);}
-.combo-card.featured{border:2px solid var(--vm);}
-.combo-feat-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--vd),var(--vp));color:#fff;font-size:9px;font-weight:800;padding:5px 18px;border-radius:20px;}
-
-.combo-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--vd),var(--vp));display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;margin-bottom:12px;}
-.combo-title{font-size:18px;font-weight:800;color:var(--vp);margin-bottom:4px;line-height:1.2;}
-.combo-sub{font-size:11px;color:var(--w4);margin-bottom:18px;font-style:italic;}
-
-.combo-items{list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:0;flex:1;}
-.combo-items li{font-size:12.5px;color:rgba(255,255,255,.8);display:flex;gap:0;align-items:stretch;border-bottom:1px solid #150030;}
-.combo-items li:last-child{border-bottom:none;}
-.combo-items li .bar{width:3px;background:var(--vm);margin-right:12px;flex-shrink:0;border-radius:2px;}
-.combo-items li span{padding:9px 0;line-height:1.4;}
-.combo-items li strong{color:#fff;font-weight:700;}
-
-.combo-example-label{font-size:10px;color:var(--vp);font-weight:700;letter-spacing:1px;margin-bottom:8px;margin-top:4px;}
-.combo-video{border-radius:12px;overflow:hidden;margin-bottom:18px;border:1px solid var(--border2);background:#000;aspect-ratio:16/9;width:100%;}
-.combo-video iframe{width:100%;height:100%;border:none;display:block;}
-.combo-video-multi{display:flex;flex-direction:column;gap:12px;margin-bottom:18px;}
-.combo-video-multi .combo-video{flex:1;margin-bottom:0;}
-
-.combo-result{font-size:11px;color:var(--w6);line-height:1.6;margin-bottom:20px;padding:12px 14px;background:rgba(147,51,234,.08);border:1px solid rgba(147,51,234,.2);border-radius:10px;}
-.combo-result strong{color:var(--vp);}
-.wsp-btn-combo{width:100%;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;padding:14px;border-radius:50px;font-size:13px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
-.wsp-btn-combo:hover{opacity:.9;}
-.wsp-icon{width:16px;height:16px;flex-shrink:0;}
-
-/* ── TESTIMONIOS ── */
-.testi{padding:72px 5%;background:transparent;}
-.testi h2{text-align:center;font-size:clamp(20px,3.5vw,32px);font-weight:800;margin-bottom:10px;}
-.testi-sub{text-align:center;color:var(--w6);font-size:14px;margin-bottom:48px;}
-
-.carousel-wrap{position:relative;max-width:960px;margin:0 auto;}
-.carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:8px;}
-.carousel::-webkit-scrollbar{display:none;}
-.testi-card{scroll-snap-align:start;flex-shrink:0;width:clamp(260px,70vw,320px);border-radius:16px;overflow:hidden;background:transparent;border:none;}
-.testi-card img{width:100%;display:block;border-radius:16px;object-fit:cover;object-position:center 40%;height:auto;max-height:280px;}
-
-.carousel-dots{display:flex;justify-content:center;gap:6px;margin-top:20px;}
-.carousel-dot{width:6px;height:6px;border-radius:50%;background:var(--border2);cursor:pointer;transition:background .2s;}
-.carousel-dot.active{background:var(--vp);}
-.carousel-nav{display:flex;justify-content:center;gap:12px;margin-top:14px;}
-.carousel-nav button{background:rgba(192,132,252,.1);border:1px solid rgba(192,132,252,.25);color:var(--vp);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;}
-.carousel-nav button:hover{background:rgba(192,132,252,.2);}
-
-.testi-more{text-align:center;margin-top:28px;}
-.testi-more a{color:var(--vm);font-size:12px;text-decoration:underline;opacity:.7;}
+/* ── TESTIMONIOS (Flotantes, sin caja negra) ── */
+.carousel{display:flex;gap:20px;overflow-x:auto;padding:40px 0;scrollbar-width:none;}
+.testi-card{flex-shrink:0;width:280px;cursor:pointer;transition:transform 0.3s ease;background:transparent;border:none;}
+.testi-card img{width:100%;border-radius:12px;box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);}
+.testi-card:hover, .testi-card:active{transform:scale(1.15);z-index:10;}
 
 /* ── FAQ ── */
-.faq{padding:72px 5%;background:#04000d;}
-.faq h2{text-align:center;font-size:clamp(20px,3.5vw,32px);font-weight:800;margin-bottom:48px;}
-.faq-list{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
-.faq-item{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--vd);border-radius:0 14px 14px 0;padding:18px 20px;cursor:pointer;transition:border-color .2s;}
-.faq-item:hover{border-color:var(--vm);}
-.faq-q{font-size:13px;font-weight:700;color:var(--vp);margin-bottom:0;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-.faq-a{font-size:12px;color:var(--w6);line-height:1.65;max-height:0;overflow:hidden;transition:max-height .3s ease,margin-top .3s ease;}
+.faq-item{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--vd);border-radius:0 14px 14px 0;padding:18px 20px;cursor:pointer;margin-bottom:10px;}
+.faq-a{max-height:0;overflow:hidden;transition:all 0.3s ease;font-size:12px;color:var(--w6);}
 .faq-item.open .faq-a{max-height:200px;margin-top:10px;}
-.faq-arrow{transition:transform .3s;font-size:12px;flex-shrink:0;}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
-
-/* ── CTA FINAL ── */
-.cta-final{padding:80px 5%;text-align:center;position:relative;overflow:hidden;}
-.cta-final::before{content:'';position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(147,51,234,.14),transparent 65%);pointer-events:none;}
-.cta-final h2{font-size:clamp(22px,4.5vw,42px);font-weight:800;line-height:1.25;margin-bottom:14px;max-width:580px;margin-left:auto;margin-right:auto;}
-.cta-final h2 .grad{background:linear-gradient(135deg,#fff 0%,var(--vp) 60%,var(--vd) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.cta-final p{font-size:15px;color:var(--w6);margin-bottom:36px;line-height:1.7;}
-.wsp-btn-big{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;padding:17px 40px;border-radius:50px;font-size:15px;font-weight:800;cursor:pointer;}
-.wsp-btn-big:hover{opacity:.9;}
 
 /* ── FOOTER ── */
-.footer{padding:28px 5%;border-top:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:6px;}
-.footer img{height:24px;opacity:.7;filter:grayscale(30%);}
-.footer-copy{font-size:11px;color:var(--w4);}
+.footer{padding:40px 5%;text-align:center;border-top:1px solid var(--border);}
+.heart-vector {fill:var(--vm);width:18px;height:18px;vertical-align:middle;margin:0 4px;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   .pain-grid{grid-template-columns:1fr;}
-  .combos-grid{grid-template-columns:1fr;}
-  .hero{padding:56px 5% 48px;}
-  .pain{padding:48px 5%;}
-  .how{padding:48px 5%;}
-  .combos{padding:48px 5%;}
-  .testi{padding:48px 5%;}
-  .faq{padding:48px 5%;}
-  .cta-final{padding:56px 5%;}
-}
-
-@media(max-width:640px){
-  .nav{padding:12px 4%;}
-  .nav-cta{padding:8px 18px;font-size:11px;}
-  .hero{padding:48px 4% 36px;}
-  .hero h1{font-size:clamp(22px,5vw,32px);}
-  .hero-stats{gap:clamp(12px,3vw,30px);}
-  .pain-grid{gap:12px;}
-  .pain-card{padding:18px 14px;}
-  .combo-video-multi{flex-direction:column;}
-  .carousel{gap:12px;}
-  .testi-card{width:clamp(220px,90vw,280px);}
-  .step{gap:14px;padding:18px 0;}
-  .step-n{width:32px;height:32px;font-size:12px;}
-  .faq-q{font-size:12px;}
+  .hero h1{font-size:32px;}
+  .testi-card{width:220px;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
-  <div class="nav-logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Logo"></div>
-  <a href="https://wa.link/b1opb0" class="nav-cta" target="_blank">Hablemos →</a>
+  <div class="nav-logo"><img src="https://i.ibb.co/XfXvXT5/logo.png" alt="11ELEVEN"></div>
+  <a href="#" class="nav-cta">AGENDAR LLAMADA</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-blob hero-blob-1"></div>
-  <div class="hero-blob hero-blob-2"></div>
-  <div class="hero-tag">PARA ARTISTAS CON HAMBRE</div>
-  <h1>
-    <span class="plain">Sabés que tenés con qué.<br></span>
-    <span class="grad">Lo frustrante es que tu proyecto todavía no lo refleja.</span>
-  </h1>
-  <p class="hero-sub">Te ayudamos a bajar lo que tenés en la cabeza y convertirlo en un proyecto que se vea serio, sólido y con identidad.</p>
-  <button class="btn-scroll" onclick="document.getElementById('como').scrollIntoView({behavior:'smooth'})">Ver cómo trabajamos ↓</button>
+  <span class="hero-tag">DIRECCIÓN CREATIVA</span>
+  <h1>Visuales & dirección para <span class="grad">artistas de élite</span></h1>
+  <p class="hero-sub">Transformamos tu visión musical en una experiencia visual cinematográfica que impacta.</p>
   <div class="hero-stats">
-    <div class="stat-item"><div class="stat-num">+80</div><div class="stat-label">ARTISTAS ACOMPAÑADOS</div></div>
-    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">ENFOCADOS EN SOLISTAS</div></div>
-    <div class="stat-item"><div class="stat-num">Proceso</div><div class="stat-label">CLARO Y DIRECTO</div></div>
-    <div class="stat-item"><div class="stat-num"><span class="heart-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#C084FC"/></svg></span></div><div class="stat-label">HECHO CON AMOR</div></div>
+    <div class="stat-item"><div class="stat-num">+50</div><div class="stat-label">PROYECTOS</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">CALIDAD</div></div>
   </div>
 </section>
 
-<div class="gd"></div>
-
-<!-- PAIN -->
 <section class="pain">
-  <div class="slabel"><span>CAPAZ TE ESTÁ PASANDO ESTO</span></div>
-  <h2>No siempre el problema está en la música.</h2>
-  <p class="pain-sub">Si te pegó alguna de estas, probablemente ya te cansaste de sentir que tenés algo… y que no se note.</p>
   <div class="pain-grid">
-    <div class="pain-card">
-      <div class="pain-card-emoji">🔊</div>
-      <h3>"Tengo temas buenos… pero no están llegando."</h3>
-      <p>Le metés de verdad a la música, pero desde afuera tu proyecto todavía no genera el impacto que podría.</p>
+    <div class="pain-card"><span class="pain-emoji">😩</span><h3>Imagen Genérica</h3><p>Sientes que tu visual no destaca del resto.</p></div>
+    <div class="pain-card"><span class="pain-emoji">⏱️</span><h3>Sin Tiempo</h3><p>Te enfocas en la música y descuidas la imagen.</p></div>
+    <div class="pain-card"><span class="pain-emoji">📉</span><h3>Bajo Impacto</h3><p>Tus lanzamientos no tienen el alcance visual que merecen.</p></div>
+    <div class="pain-card"><span class="pain-emoji">🤯</span><h3>Confusión Visual</h3><p>No logras transmitir tu concepto artístico.</p></div>
+  </div>
+</section>
+
+<section class="combos">
+  <div class="combos-container">
+    <div>
+      <h2>COMBO 1</h2>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/t0KArEKluhs" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/1N8-WumU-SM" allowfullscreen></iframe></div>
     </div>
-    <div class="pain-card">
-      <div class="pain-card-emoji">🎨</div>
-      <h3>"Cada tema se siente como un proyecto distinto."</h3>
-      <p>Tenés ideas, referencias y gusto, pero todavía no hay una identidad que haga que todo se sienta parte de lo mismo.</p>
+    <div>
+      <h2>COMBO 2</h2>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/CYmIB5BoD00" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/6cF9NIHDdeU" allowfullscreen></iframe></div>
     </div>
-    <div class="pain-card">
-      <div class="pain-card-emoji">📏</div>
-      <h3>"Siento que mi proyecto se ve más chico de lo que realmente es."</h3>
-      <p>Y eso termina bajándole valor cuando en realidad tenés mucho para dar.</p>
-    </div>
-    <div class="pain-card">
-      <div class="pain-card-emoji">🔧</div>
-      <h3>"Estoy haciendo cosas… pero no siento que esté construyendo algo serio."</h3>
-      <p>Sacás música, movés el lanzamiento y seguís. Pero en el fondo sabés que tu proyecto todavía está demasiado improvisado.</p>
+    <div>
+      <h2>COMBO 3</h2>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/AeACaN4uqK8" allowfullscreen></iframe></div>
+      <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/smat1osQsC4" allowfullscreen></iframe></div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE -->
-<div class="qbreak">
-  <div class="qwrap">
-    <div class="qbig">"El nivel ya está.<br>Lo frustrante es sentir que tu proyecto <em>todavía no lo refleja.</em>"</div>
-    <div class="qattr">— AHÍ ES DONDE ENTRA ELEVEN —</div>
-  </div>
-</div>
-
-<!-- CÓMO FUNCIONA -->
-<section class="how" id="como">
-  <div class="slabel"><span>ASÍ TRABAJAMOS</span></div>
-  <h2>Simple, claro y sin vueltas</h2>
-  <p class="how-sub">Lo hacemos simple para que puedas enfocarte en tu música, sin sentir que esto es un quilombo.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-n">1</div>
-      <div>
-        <h3>Me contás si tenés algo en mente</h3>
-        <p>Me mandás tu música, referencias o todo eso que tenés dando vueltas en la cabeza. Nosotros te ayudamos a bajarlo.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-n">2</div>
-      <div>
-        <h3>Le damos una forma clara</h3>
-        <p>Ordenamos la idea, entendemos qué querés transmitir y bajamos todo eso a una dirección que sí tenga sentido con tu música.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-n">3</div>
-      <div>
-        <h3>Recibís todo listo para salir</h3>
-        <p>Visuales, gráficas y piezas pensadas para que tu lanzamiento se vea sólido, cuidado y con una dirección puntual.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-n">4</div>
-      <div>
-        <h3>Por fin se empieza a ver como lo vivís vos</h3>
-        <p>Esa sensación de "hay algo que no cierra" empieza a desaparecer. Y tu imagen deja de quedarse atrás de tu música.</p>
-      </div>
-    </div>
+<section class="testi">
+  <div class="carousel">
+    <div class="testi-card"><img src="testi1.jpg"></div>
+    <div class="testi-card"><img src="testi2.jpg"></div>
+    <div class="testi-card"><img src="testi3.jpg"></div>
+    <div class="testi-card"><img src="testi4.jpg"></div>
   </div>
 </section>
 
-<div class="gd"></div>
-
-<!-- COMBOS -->
-<section class="combos" id="combos">
-  <div class="slabel"><span>FORMATOS DE TRABAJO</span></div>
-  <h2>Elegí cómo querés salir con tu proyecto</h2>
-  <p class="combos-sub">No todos los artistas están en el mismo momento. Por eso armamos distintas formas de trabajar según lo que hoy necesite tu lanzamiento.</p>
-
-  <div class="combos-grid">
-
-    <!-- COMBO 1: Visual Loop -->
-    <div class="combo-card">
-      <div class="combo-num">1</div>
-      <div style="font-size:9px;font-weight:700;color:var(--w4);letter-spacing:1.5px;margin-bottom:8px;">PARA SALIR CON NIVEL SIN COMPLICARTE</div>
-      <div class="combo-title">Visual Loop</div>
-      <div class="combo-sub">Para que tu próximo tema salga prolijo, con identidad y mucho mejor parado visualmente.</div>
-      <ul class="combo-items">
-        <li><div class="bar"></div><span><strong>Análisis completo del single</strong> (barra por barra)</span></li>
-        <li><div class="bar"></div><span><strong>Dirección y criterio creativo</strong></span></li>
-        <li><div class="bar"></div><span><strong>3 ideas de concepto</strong> para elegir</span></li>
-        <li><div class="bar"></div><span><strong>Visual loop + lyrics subtituladas</strong> para YouTube</span></li>
-        <li><div class="bar"></div><span><strong>Portada</strong> para Spotify</span></li>
-        <li><div class="bar"></div><span><strong>Miniatura</strong> para YouTube</span></li>
-      </ul>
-      <div class="combo-example-label">EJEMPLOS:</div>
-      <div class="combo-video-multi">
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/t0KArEKluhs" loading="lazy" allowfullscreen title="Ejemplo Visual Loop 1"></iframe></div>
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/1N8-WumU-SM" loading="lazy" allowfullscreen title="Ejemplo Visual Loop 2"></iframe></div>
-      </div>
-      <div class="combo-result"><strong>Resultado:</strong> Una forma simple pero sólida de dejar de lanzar "así nomás" y empezar a mostrar tu música con más intención.</div>
-      <a href="https://wa.link/b1opb0" class="wsp-btn-combo" target="_blank">
-        <svg class="wsp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.52.025-.174-.198-.179-.652.016-.868.195-.215.681-.528.88-.63.2-.102.351-.271.449-.465.098-.194.159-.374.191-.577.032-.204.026-.423-.011-.64-.037-.217-.12-.426-.245-.61-.125-.185-.29-.336-.478-.45-.189-.114-.399-.19-.618-.224-.22-.033-.447-.023-.667.03-.22.052-.43.157-.616.31-.186.152-.344.356-.459.593-.115.237-.185.501-.204.77-.02.27.01.544.089.8.078.256.2.496.36.706.16.21.353.388.57.528.218.14.456.237.7.288.244.05.493.052.74.004.248-.048.487-.159.693-.326.206-.167.372-.393.485-.66.113-.268.17-.563.167-.86-.003-.297-.068-.59-.19-.859-.122-.269-.297-.509-.517-.71l.009-.008zm-2.38 7.58c-.304-.304-.47-.716-.47-1.138 0-.423.166-.833.47-1.137.304-.304.716-.47 1.138-.47.422 0 .833.166 1.137.47.304.304.47.714.47 1.137 0 .422-.166.834-.47 1.138-.304.304-.715.47-1.137.47-.422 0-.834-.166-1.138-.47z" fill="#fff"/></svg>
-        CONSULTAR ESTE FORMATO
-      </a>
-    </div>
-
-    <!-- COMBO 2: Visual Dinámica -->
-    <div class="combo-card featured">
-      <div class="combo-feat-badge">✦ MÁS COMPLETO</div>
-      <div class="combo-num">2</div>
-      <div style="font-size:9px;font-weight:700;color:var(--w4);letter-spacing:1.5px;margin-bottom:8px;">PARA ARTISTAS QUE QUIEREN MÁS PRESENCIA</div>
-      <div class="combo-title">Visual Dinámica</div>
-      <div class="combo-sub">Para que el lanzamiento se sienta más completo, más activo y más presente en todas las plataformas.</div>
-      <ul class="combo-items">
-        <li><div class="bar"></div><span><strong>Análisis completo del single</strong> (barra por barra)</span></li>
-        <li><div class="bar"></div><span><strong>Dirección y criterio creativo</strong></span></li>
-        <li><div class="bar"></div><span><strong>3 ideas de concepto</strong> para elegir</span></li>
-        <li><div class="bar"></div><span><strong>Visual con cámara activa + 1 escenario + lyrics</strong> para YouTube</span></li>
-        <li><div class="bar"></div><span><strong>Portada + Canvas</strong> para Spotify</span></li>
-        <li><div class="bar"></div><span><strong>Miniatura + Banner</strong> para YouTube</span></li>
-        <li><div class="bar"></div><span><strong>1 pieza feed + 2 stories</strong> promocionales</span></li>
-        <li><div class="bar"></div><span><strong>Acompañamiento</strong> por WhatsApp</span></li>
-      </ul>
-      <div class="combo-example-label">EJEMPLOS:</div>
-      <div class="combo-video-multi">
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/CYmIB5BoD00" loading="lazy" allowfullscreen title="Ejemplo Visual Dinámica 1"></iframe></div>
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/6cF9NIHDdeU" loading="lazy" allowfullscreen title="Ejemplo Visual Dinámica 2"></iframe></div>
-      </div>
-      <div class="combo-result"><strong>Resultado:</strong> Para que tu lanzamiento no solo salga bien, sino que también tenga más presencia, más movimiento y una imagen mucho más armada.</div>
-      <a href="https://wa.link/b1opb0" class="wsp-btn-combo" target="_blank">
-        <svg class="wsp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.52.025-.174-.198-.179-.652.016-.868.195-.215.681-.528.88-.63.2-.102.351-.271.449-.465.098-.194.159-.374.191-.577.032-.204.026-.423-.011-.64-.037-.217-.12-.426-.245-.61-.125-.185-.29-.336-.478-.45-.189-.114-.399-.19-.618-.224-.22-.033-.447-.023-.667.03-.22.052-.43.157-.616.31-.186.152-.344.356-.459.593-.115.237-.185.501-.204.77-.02.27.01.544.089.8.078.256.2.496.36.706.16.21.353.388.57.528.218.14.456.237.7.288.244.05.493.052.74.004.248-.048.487-.159.693-.326.206-.167.372-.393.485-.66.113-.268.17-.563.167-.86-.003-.297-.068-.59-.19-.859-.122-.269-.297-.509-.517-.71l.009-.008zm-2.38 7.58c-.304-.304-.47-.716-.47-1.138 0-.423.166-.833.47-1.137.304-.304.716-.47 1.138-.47.422 0 .833.166 1.137.47.304.304.47.714.47 1.137 0 .422-.166.834-.47 1.138-.304.304-.715.47-1.137.47-.422 0-.834-.166-1.138-.47z" fill="#fff"/></svg>
-        CONSULTAR ESTE FORMATO
-      </a>
-    </div>
-
-    <!-- COMBO 3: Visual Pro -->
-    <div class="combo-card">
-      <div class="combo-num">3</div>
-      <div style="font-size:9px;font-weight:700;color:var(--w4);letter-spacing:1.5px;margin-bottom:8px;">PARA UNA IMAGEN MÁS COMPLETA Y MÁS SERIA</div>
-      <div class="combo-title">Visual Pro + Guía Identidad</div>
-      <div class="combo-sub">Para artistas que sienten que ya no les alcanza con "resolver una visual" y necesitan algo más sólido.</div>
-      <ul class="combo-items">
-        <li><div class="bar"></div><span><strong>Análisis profundo de identidad, mensaje y visión</strong></span></li>
-        <li><div class="bar"></div><span><strong>Análisis completo del single</strong> (barra por barra)</span></li>
-        <li><div class="bar"></div><span><strong>Dirección y criterio creativo</strong></span></li>
-        <li><div class="bar"></div><span><strong>3 ideas de concepto</strong> para elegir</span></li>
-        <li><div class="bar"></div><span><strong>Visual premium + 2 escenarios + lyrics avanzadas</strong> para YouTube</span></li>
-        <li><div class="bar"></div><span><strong>Portada + Canvas</strong> para Spotify</span></li>
-        <li><div class="bar"></div><span><strong>Miniatura + Banner</strong> para YouTube</span></li>
-        <li><div class="bar"></div><span><strong>1 feed + 2 stories</strong> promocionales</span></li>
-        <li><div class="bar"></div><span><strong>1 reel de presentación</strong> del artista para fijar en el feed</span></li>
-        <li><div class="bar"></div><span><strong>Acompañamiento</strong> por WhatsApp</span></li>
-      </ul>
-      <div class="combo-example-label">EJEMPLOS:</div>
-      <div class="combo-video-multi">
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/AeACaN4uqK8" loading="lazy" allowfullscreen title="Ejemplo Visual Pro 1"></iframe></div>
-        <div class="combo-video"><iframe src="https://www.youtube.com/embed/smat1osQsC4" loading="lazy" allowfullscreen title="Ejemplo Visual Pro 2"></iframe></div>
-      </div>
-      <div class="combo-result"><strong>Resultado:</strong> Para que tu lanzamiento no solo se vea bien, sino que empiece a sentirse parte de un proyecto mucho más claro, más fuerte y con más identidad.</div>
-      <a href="https://wa.link/b1opb0" class="wsp-btn-combo" target="_blank">
-        <svg class="wsp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.52.025-.174-.198-.179-.652.016-.868.195-.215.681-.528.88-.63.2-.102.351-.271.449-.465.098-.194.159-.374.191-.577.032-.204.026-.423-.011-.64-.037-.217-.12-.426-.245-.61-.125-.185-.29-.336-.478-.45-.189-.114-.399-.19-.618-.224-.22-.033-.447-.023-.667.03-.22.052-.43.157-.616.31-.186.152-.344.356-.459.593-.115.237-.185.501-.204.77-.02.27.01.544.089.8.078.256.2.496.36.706.16.21.353.388.57.528.218.14.456.237.7.288.244.05.493.052.74.004.248-.048.487-.159.693-.326.206-.167.372-.393.485-.66.113-.268.17-.563.167-.86-.003-.297-.068-.59-.19-.859-.122-.269-.297-.509-.517-.71l.009-.008zm-2.38 7.58c-.304-.304-.47-.716-.47-1.138 0-.423.166-.833.47-1.137.304-.304.716-.47 1.138-.47.422 0 .833.166 1.137.47.304.304.47.714.47 1.137 0 .422-.166.834-.47 1.138-.304.304-.715.47-1.137.47-.422 0-.834-.166-1.138-.47z" fill="#fff"/></svg>
-        CONSULTAR ESTE FORMATO
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<div class="gd"></div>
-
-<!-- TESTIMONIOS -->
-<section class="testi" id="testi">
-  <div class="slabel"><span>LO QUE DICEN LOS ARTISTAS</span></div>
-  <h2>Así lo vivieron algunos artistas</h2>
-  <p class="testi-sub">Comentarios reales de artistas que trabajaron con nosotros.</p>
-  <div class="carousel-wrap">
-    <div class="carousel" id="carousel">
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 1"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 2"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 3"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 4"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 5"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 6"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 7"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 8"></div>
-      <div class="testi-card"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Testimonial 9"></div>
-    </div>
-    <div class="carousel-nav">
-      <button onclick="scrollCarousel(-1)">←</button>
-      <button onclick="scrollCarousel(1)">→</button>
-    </div>
-    <div class="carousel-dots" id="dots"></div>
-  </div>
-  <div class="testi-more">
-    <a href="https://www.instagram.com/p/C4yuiMcuFJv/" target="_blank">Ver todos los testimonios en Instagram →</a>
-  </div>
-</section>
-
-<!-- FAQ -->
 <section class="faq">
-  <div class="slabel"><span>LO QUE TE PREGUNTÁS</span></div>
-  <h2>Lo que más nos suelen preguntar</h2>
-  <div class="faq-list">
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">¿Y si todavía no tengo bien claro mi proyecto o mi identidad? <span class="faq-arrow">▼</span></div>
-      <div class="faq-a">No pasa nada. A muchos les pasa. No hace falta que llegues con todo resuelto: con tu música, algunas referencias y una idea de lo que querés transmitir ya podemos trabajar mucho.</div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">¿Cuánto tarda normalmente? <span class="faq-arrow">▼</span></div>
-      <div class="faq-a">Depende del formato, pero en general trabajamos entre 7 y 14 días hábiles desde que arrancamos. Siempre te vamos guiando para que no se haga eterno ni se sienta trabado.</div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">¿Me van a dar algo genérico? <span class="faq-arrow">▼</span></div>
-      <div class="faq-a">No. Cada proyecto se trabaja desde cero, en base a tu música, tu idea y lo que querés transmitir. La idea no es que te quede "lindo", sino que realmente se sienta tuyo.</div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-q">¿Solo para artistas con mucho presupuesto? <span class="faq-arrow">▼</span></div>
-      <div class="faq-a">No. Hay formatos distintos según el momento en el que estés. Lo más importante no es "estar pegado", sino realmente tener ganas de tomarte tu proyecto más en serio.</div>
-    </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿Cómo empezamos? <span>+</span></div>
+    <div class="faq-a">Agendamos una llamada de diagnóstico para entender tu visión y objetivos.</div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-final">
-  <div class="slabel"><span>SI SENTÍS QUE ES MOMENTO</span></div>
-  <h2><span class="grad">Cuando estés listo para que tu proyecto empiece a verse más serio, escribinos.</span></h2>
-  <p>Nos contás en qué estás, qué querés dropear y vemos juntos qué formato te conviene más.</p>
-  <a href="https://wa.link/b1opb0" class="wsp-btn-big" target="_blank">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.52.025-.174-.198-.179-.652.016-.868.195-.215.681-.528.88-.63.2-.102.351-.271.449-.465.098-.194.159-.374.191-.577.032-.204.026-.423-.011-.64-.037-.217-.12-.426-.245-.61-.125-.185-.29-.336-.478-.45-.189-.114-.399-.19-.618-.224-.22-.033-.447-.023-.667.03-.22.052-.43.157-.616.31-.186.152-.344.356-.459.593-.115.237-.185.501-.204.77-.02.27.01.544.089.8.078.256.2.496.36.706.16.21.353.388.57.528.218.14.456.237.7.288.244.05.493.052.74.004.248-.048.487-.159.693-.326.206-.167.372-.393.485-.66.113-.268.17-.563.167-.86-.003-.297-.068-.59-.19-.859-.122-.269-.297-.509-.517-.71l.009-.008zm-2.38 7.58c-.304-.304-.47-.716-.47-1.138 0-.423.166-.833.47-1.137.304-.304.716-.47 1.138-.47.422 0 .833.166 1.137.47.304.304.47.714.47 1.137 0 .422-.166.834-.47 1.138-.304.304-.715.47-1.137.47-.422 0-.834-.166-1.138-.47z" fill="#fff"/></svg>
-    Consultar por WhatsApp
-  </a>
-</section>
-
-<!-- FOOTER -->
 <footer class="footer">
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Footer Logo">
-  <div class="footer-copy">Visuales & dirección para artistas · @elevenforartists</div>
+  <p>Hecho con <svg class="heart-vector" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> por 11ELEVEN</p>
 </footer>
 
-<script>
-function toggleFaq(el){
-  document.querySelectorAll('.faq-item').forEach(i=>{ if(i!==el) i.classList.remove('open'); });
-  el.classList.toggle('open');
-}
-
-const car = document.getElementById('carousel');
-const dotsEl = document.getElementById('dots');
-const cards = car.querySelectorAll('.testi-card');
-const cardW = ()=> cards[0].offsetWidth + 16;
-
-cards.forEach((_,i)=>{
-  const d = document.createElement('div');
-  d.className = 'carousel-dot' + (i===0?' active':'');
-  d.onclick = ()=>{ car.scrollTo({left:i*cardW(),behavior:'smooth'}); };
-  dotsEl.appendChild(d);
-});
-
-function updateDots(){
-  const idx = Math.round(car.scrollLeft / cardW());
-  document.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
-}
-car.addEventListener('scroll',updateDots,{passive:true});
-
-function scrollCarousel(dir){
-  car.scrollBy({left:dir*cardW(),behavior:'smooth'});
-}
-
-document.querySelector('.faq-item').classList.add('open');
-</script>
 </body>
 </html>
